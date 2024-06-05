@@ -1,0 +1,126 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #000; /* Arka planı siyah yapıyoruz */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+header .left {
+    display: flex;
+    align-items: center;
+}
+
+header .left .app-name {
+    color: #fff; /* Beyaz renkte */
+    text-decoration: none;
+    font-size: 24px; /* Daha büyük font */
+    padding: 0 20px;
+}
+
+
+.container {
+    width: 100%;
+    max-width: 350px; /* Daha küçük bir genişlik */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px; /* Daha az padding */
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.signup-box {
+    position: relative;
+    max-width: 350px;
+    padding: 30px; /* Daha az padding */
+    background: rgba(0, 0, 0, 0.8); /* Daha koyu bir arka plan */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.signup-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.signup-box .user-box {
+    position: relative;
+}
+
+.signup-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+}
+
+.signup-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.signup-box .user-box input:focus ~ label,
+.signup-box .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: red;
+    font-size: 12px;
+}
+
+.signup-box a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: red;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    overflow: hidden;
+    border: 2px solid red; /* Çerçeve rengi ve kalınlığı */
+    transition: 0.5s;
+}
+
+.signup-box a:hover {
+    background: red;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px red,
+                0 0 25px red,
+                0 0 50px red,
+                0 0 100px red;
+}
+
+.signup-box a span {
+    position: absolute;
+    display: none; /* Çerçeve animasyonlarını kaldırdık */
+}
